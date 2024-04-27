@@ -1,4 +1,5 @@
 import React, { FormEvent } from "react";
+import axios from "axios";
 
 const STATUS = {
     TODO: "Todo",
@@ -27,6 +28,8 @@ function App() {
             todoItem,
             status,
         } as Task;
+
+        axios.post("http://localhost:8081/task", newTodo);
 
         setTasks((prev) => [...prev, newTodo]);
     }
