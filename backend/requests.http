@@ -1,0 +1,13 @@
+GET http://localhost:8081/task
+
+
+###
+
+POST http://localhost:8081/task
+Content-Type: application/json
+
+{
+    "name": "Task 1",
+    "description": "Task 1 description",
+    "status": "PENDING"
+}
